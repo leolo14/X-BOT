@@ -10,7 +10,7 @@ void G990::initialiser(bool Nord, bool Est, long EnergiePhisique,
 	setVision(Vision);
 }
 
-void G990::deplacementNordSud(int valeur, int& x, int& y)
+void G990::deplacementNordSud(int valeur, int& x, int& y) const
 {
 	if (energieMaximale > valeur)
 	{
@@ -25,7 +25,7 @@ void G990::deplacementNordSud(int valeur, int& x, int& y)
 	}
 }
 
-void G990::deplacementEstOuest(int valeur, int& x, int& y)
+void G990::deplacementEstOuest(int valeur, int& x, int& y) const
 {
 	if (energieMaximale > valeur)
 	{

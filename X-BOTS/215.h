@@ -12,13 +12,13 @@ private:
 	bool rageCombat;
 
 public:
-	void initialiser(char Nom, int Direction, int Force, 
+	void initialiser(string Nom, int Direction, int Force, 
 		int Vitesse, int Vision);
 
-	int bloquer();
+	int bloquer() const;
 
-	void mouvement(int& x, int& y);
-	void superCourse(int& x, int& y);
+	void mouvement(int& x, int& y) const;
+	void superCourse(int& x, int& y) const;
 	void esquive(int& x, int& y, int xDanger, int yDanger);
 	void tournerLesTalons() { direction = (direction + 2) % 3) };
 

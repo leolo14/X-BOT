@@ -10,12 +10,12 @@ class W000 {
 		int vision;
 
 	public:
-		void initialiser(char Nom, int Direction, int Force,
+		void initialiser(string Nom, int Direction, int Force,
 			int Vitesse, int Vision);
 
 		void bloquer(int xAmi, int yAmi, int& x, int& y,
 			int xEnnemi, int yEnnemi);
-		void bouger(int& x, int& y);
+		void bouger(int& x, int& y) const;
 		
 		string getNom() const { return nom; }
 		int getDirection() const { return direction; }

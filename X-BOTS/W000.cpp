@@ -1,6 +1,6 @@
 #include "W000.h"
 
-void W000::initialiser(char Nom, int Direction, int Force, int Vitesse, int Vision)
+void W000::initialiser(string Nom, int Direction, int Force, int Vitesse, int Vision)
 {
 	setNom(Nom);
 	if (Direction < 0)
@@ -25,7 +25,7 @@ void W000::bloquer(int xAmi, int yAmi, int& x, int& y, int xEnnemi, int yEnnemi)
 	//TODO
 }
 
-void W000::bouger(int& x, int& y)
+void W000::bouger(int& x, int& y) const
 {
 	int deplacement = vitesse + 2;
 	switch (direction)

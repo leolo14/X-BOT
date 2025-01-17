@@ -21,7 +21,7 @@ void R234::initialiser(int Direction, int Strength, int Speed, int Range)
 
 
 
-void R234::doMove(int& x, int& y)
+void R234::doMove(int& x, int& y) const
 {
 	switch (direction)
 	{

@@ -1,7 +1,7 @@
 #include "215.h"
 
 
-void X215::initialiser(char Nom, int Direction, int Force, 
+void X215::initialiser(string Nom, int Direction, int Force, 
 	int Vitesse, int Vision)
 {
 	setNom(Nom);
@@ -24,7 +24,7 @@ void X215::initialiser(char Nom, int Direction, int Force,
 	rageCombat = false;
 }
 
-int X215::bloquer()
+int X215::bloquer() const
 {
 	if (rageCombat)
 	{
@@ -34,7 +34,7 @@ int X215::bloquer()
 	return (vitesse / 3 + force);
 }
 
-void X215::mouvement(int& x, int& y)
+void X215::mouvement(int& x, int& y) const
 {
 	int deplacement = getVitesse + 1;
 	switch (direction)
@@ -49,7 +49,7 @@ void X215::mouvement(int& x, int& y)
 	y = max(min(x, 9), 0);
 }
 
-void X215::superCourse(int& x, int& y)
+void X215::superCourse(int& x, int& y) const
 {
 	int deplacement;
 

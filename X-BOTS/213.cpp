@@ -1,7 +1,7 @@
 #include "213.h"
 
 
-void X213::initialiser(char Nom, int Direction, int Force, 
+void X213::initialiser(string Nom, int Direction, int Force, 
 	int Vitesse, int Vision)
 {
 	nom = Nom;
@@ -25,7 +25,7 @@ void X213::initialiser(char Nom, int Direction, int Force,
 }
 
 
-void X213::mouvement(int& x, int& y)
+void X213::mouvement(int& x, int& y) const
 {
 	int deplacement = vitesse + 1;
 	switch (direction)
@@ -39,8 +39,8 @@ void X213::mouvement(int& x, int& y)
 	x = max(min(x, 9), 0);
 	y = max(min(x, 9), 0);
 }
-
-void X213::superCourse(int& x, int& y)
+ 
+void X213::superCourse(int& x, int& y) const
 {
 	int deplacement = vitesse + (vitesse * force / 10);
 	switch (direction)

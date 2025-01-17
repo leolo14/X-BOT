@@ -12,8 +12,8 @@ public:
 	void initialiser(bool Nord, bool Est, long EnergiePhisique,
 		long EnergieMaximale, long Vision);
 	
-	void deplacementNordSud(int valeur, int& x, int& y);
-	void deplacementEstOuest(int valeur, int& x, int& y);
+	void deplacementNordSud(int valeur, int& x, int& y) const;
+	void deplacementEstOuest(int valeur, int& x, int& y) const;
 
 	void regarderNord() { nord = true; }
 	void regarderSud() { nord = false; }
@@ -23,11 +23,11 @@ public:
 	void bloquer(int xAmi, int yAmi, int& x, int& y,
 		int xEnnemi, int yEnnemi);
 
-	bool getNord() { return nord; }
-	bool getEst() { return est; }
-	long getEnergiePhysique() { return energiePhysique; }
-	long getEnergieMaximale() { return energieMaximale; }
-	long getVision() { return vision; }
+	bool getNord() const { return nord; }
+	bool getEst() const { return est; }
+	long getEnergiePhysique() const { return energiePhysique; }
+	long getEnergieMaximale() const { return energieMaximale; }
+	long getVision() const { return vision; }
 
 	void setEnergiePhysique(long EnergiePhysique)
 	{ energiePhysique = EnergiePhysique; }

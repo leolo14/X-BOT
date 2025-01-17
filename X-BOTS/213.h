@@ -12,14 +12,14 @@ private:
 
 
 public:
-	void initialiser(char Nom, int Direction, int Force, 
+	void initialiser(string Nom, int Direction, int Force, 
 		int Vitesse, int Vision);
 
-	int bloquer() { return (vitesse / 3 + force) };
+	int bloquer() const { return (vitesse / 3 + force) };
 
-	void mouvement(int& x, int& y);
-	void superCourse(int& x, int& y);
-	void tournerLesTalons() { direction = (direction + 2) % 3) };
+	void mouvement(int& x, int& y) const;
+	void superCourse(int& x, int& y) const;
+	void tournerLesTalons() { direction = (direction + 2) % 4) };
 
 
 	string getNom() const { return nom; }

@@ -10,13 +10,13 @@ private:
 	int vision;
 
 public:
-	void initialiser(char Nom, int Direction, int Force, 
+	void initialiser(string Nom, int Direction, int Force, 
 		int Vitesse, int Vision);
 
 	int bloquer() { return (vitesse / 3 + force) };
 
-	void mouvement(int& x, int& y);
-	void superCourse(int& x, int& y);
+	void mouvement(int& x, int& y) const;
+	void superCourse(int& x, int& y) const;
 	void esquive(int& x, int& y, int xDanger, int yDanger);
 
 	string getNom() const { return nom; }
