@@ -15,10 +15,10 @@ public:
 	void deplacementNordSud(int valeur, int& x, int& y);
 	void deplacementEstOuest(int valeur, int& x, int& y);
 
-	void regarderNord();
-	void regarderSud();
-	void regarderEst();
-	void regarderOuest();
+	void regarderNord() { nord = true; }
+	void regarderSud() { nord = false; }
+	void regarderEst() { est = true; }
+	void regarderOuest() { est = false; }
 
 	void bloquer(int xAmi, int yAmi, int& x, int& y,
 		int xEnnemi, int yEnnemi);

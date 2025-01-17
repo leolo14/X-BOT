@@ -6,13 +6,16 @@ void X215::initialiser(char Nom, int Direction, int Force,
 {
 	setNom(Nom);
 
-	if (Direction >= 0 || Direction < 4)
-	{
-		setDirection(Direction);
-	}
-	else
+	if (Direction < 0)
 	{
 		setDirection(0);
+	}
+	else if (Direction > 3)
+	{
+		setDirection(3)
+	}
+	{
+		setDirection(Direction);
 	}
 
 	setForce(Force);

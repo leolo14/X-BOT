@@ -10,12 +10,15 @@ class R234
 	public:
 		void initialiser(int Direction, int Strength, int Speed, int Range);
 		
-		int doAttack(int defenceEnemy);
-		int doProtect(int attackEnemy);
+		int doAttack(int defenceEnemy) 
+			{ strength - defenceEnemy < 0 ? 0 : strength - defenceEnemy };
+		int doProtect(int attackEnemy)
+			{ attackEnemy - (speed + strength) / 2 < 0 ? 0 : 
+			attackEnemy - (speed + strength) / 2 };
 
 		void doMove(int& x, int& y);
-		void doRotateLeft() { direction = (direction + 1) % 3) };
-		void doRotateRight() { direction = (direction - 1) % 3) };
+		void doRotateLeft() { direction = (direction + 1) % 4) };
+		void doRotateRight() { direction = (direction +3) % 4) };
 
 		int getDirection() { return direction };
 		int getStrength() { return strength };

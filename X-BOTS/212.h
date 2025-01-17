@@ -1,8 +1,9 @@
-
+#include <string>
+using namespace std;
 class X212
 {
 private:
-	char nom;
+	string nom;
 	int direction;
 	int force;
 	int vitesse;
@@ -18,13 +19,13 @@ public:
 	void superCourse(int& x, int& y);
 	void esquive(int& x, int& y, int xDanger, int yDanger);
 
-	char getNom() const { return nom; }
+	string getNom() const { return nom; }
 	int getDirection() const { return direction; }
 	int getForce() const { return force; }
 	int getVitesse() const { return vitesse; }
 	int getVision() const { return vision; }
 
-	void setNom(char Nom) { nom = Nom; }
+	void setNom(string Nom) { nom = Nom; }
 	void setDirection(int Direction) { direction = Direction; }
 	void setForce(int Force) { force = Force; }
 	void setVitesse(int Vitesse) { vitesse = Vitesse; }

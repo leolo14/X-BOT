@@ -1,8 +1,10 @@
+#include <string>
+using namespace std;
 
 class X215
 {
 private:
-	char nom;
+	string nom;
 	int direction;
 	int force;
 	int vitesse;
@@ -20,7 +22,7 @@ public:
 	void esquive(int& x, int& y, int xDanger, int yDanger);
 	void tournerLesTalons() { direction = (direction + 2) % 3) };
 
-	char getNom() const { return nom; }
+	string getNom() const { return nom; }
 	int getDirection() const { return direction; }
 	int getForce() const { return force; }
 	int getVitesse() const { return vitesse; }
@@ -29,7 +31,7 @@ public:
 	void exploserRage() { rageCombat = true };
 	void controlerRage() { rageCombat = false };
 
-	void setNom(char Nom) { nom = Nom; }
+	void setNom(string Nom) { nom = Nom; }
 	void setDirection(int Direction) { direction = Direction; }
 	void setForce(int Force) { force = Force; }
 	void setVitesse(int Vitesse) { vitesse = Vitesse; }
