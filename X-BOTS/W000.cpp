@@ -3,21 +3,26 @@
 void W000::initialiser(string Nom, int Direction, int Force, int Vitesse, int Vision)
 {
 	setNom(Nom);
-	if (Direction < 0)
-	{
-		setDirection(0);
-	}
-	else if (Direction > 3)
-	{
-		setDirection(3);
-	}
-	else
-	{
-		setDirection(Direction);
-	}
+	setDirection(Direction);
 	setForce(Force);
 	setVitesse(Vitesse);
 	setVision(Vision);
+}
+
+void W000::setDirection(int Direction)
+{
+	if (Direction < 0)
+	{
+		direction = 0;
+	}
+	else if (Direction > 3)
+	{
+		direction = 3;
+	}
+	else
+	{
+		direction = Direction;
+	}
 }
 
 void W000::bloquer(int xAmi, int yAmi, int& x, int& y, int xEnnemi, int yEnnemi)

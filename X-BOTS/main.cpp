@@ -1,7 +1,7 @@
 #include <iostream>
-#include "X212.h"
-#include "X213.h"
-#include "X215.h"
+#include "212.h"
+#include "213.h"
+#include "215.h"
 #include "R234.h"
 #include "G990.h"
 #include "W000.h"
@@ -333,13 +333,12 @@ void testW000()
 void testsXBots()
 {
 	char choix = 'q';
-	string nom1 = "<ETUDIANT #1>";
-	string nom2 = "<ETUDIANT #2>";
+	string nom1 = "<Leo PELE>";
 
 	do
 	{
 		cout << "---------------------------------------------------" << endl;
-		cout << "NOM #1 : " << nom1 << "/NOM #2 : " << nom2 << endl;
+		cout << "NOM #1 : " << nom1 << endl;
 		cout << "1-X212/2-X213/3-X215/4-R234/5-G990/6-W000/q-quitter" << endl;
 		cout << "Choix du test >> ";
 		std::cin >> choix;
@@ -347,22 +346,22 @@ void testsXBots()
 		switch (choix)
 		{
 		case '1':	
-			//testX212();
+			testX212();
 			break;
 		case '2':	
-			//testX213();
+			testX213();
 			break;
 		case '3':	
-			//testX215();
+			testX215();
 			break;
 		case '4':	
-			//testR234();
+			testR234();
 			break;
 		case '5':	
-			//testG990();
+			testG990();
 			break;
 		case '6':	
-			//testW000();
+			testW000();
 			break;
 		}
 	} while (choix != 'q');

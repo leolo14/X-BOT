@@ -2,24 +2,27 @@
 
 void R234::initialiser(int Direction, int Strength, int Speed, int Range)
 {
-	if (Direction < 0)
-	{
-		setDirection(0);
-	}
-	else if (Direction > 3)
-	{
-		setDirection(3)
-	}
-	else
-	{
-		setDirection(Direction);
-	}
+	setDirection(Direction);
 	strength = Strength;
 	speed = Speed;
 	range = Range;
 }
 
-
+void R234::setDirection(int Direction)
+{
+	if (Direction < 0)
+	{
+		direction = 0;
+	}
+	else if (Direction > 3)
+	{
+		direction = 3;
+	}
+	else
+	{
+		direction = Direction;
+	}
+}
 
 void R234::doMove(int& x, int& y) const
 {
@@ -32,5 +35,5 @@ void R234::doMove(int& x, int& y) const
 	}
 
 	x = max(min(x, 9), 0);
-	y = max(min(x, 9), 0);
+	y = max(min(y, 9), 0);
 }

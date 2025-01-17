@@ -12,32 +12,34 @@ void G990::initialiser(bool Nord, bool Est, long EnergiePhisique,
 
 void G990::deplacementNordSud(int valeur, int& x, int& y) const
 {
-	if (energieMaximale > valeur)
+	long val = min((long)valeur, energieMaximale);
+	if (nord)
 	{
-		if (nord)
-		{
-			y -= valeur;
-		}
-		else
-		{
-			y += valeur;
-		}
+		y -= val;
 	}
+	else
+	{
+		y += val;
+	}
+	
+	x = max(min(x, 9), 0);
+	y = max(min(y, 9), 0);
 }
 
 void G990::deplacementEstOuest(int valeur, int& x, int& y) const
 {
-	if (energieMaximale > valeur)
+	long val = min((long)valeur, energieMaximale);
+	
+	if (est)
 	{
-		if (est)
-		{
-			x += valeur;
-		}
-		else
-		{
-			x -= valeur;
-		}
+		x += val;
 	}
+	else
+	{
+		x -= val;
+	}
+	x = max(min(x, 9), 0);
+	y = max(min(y, 9), 0);
 }
 
 void G990::bloquer(int xAmi, int yAmi, int& x, int& y,

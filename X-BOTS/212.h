@@ -13,7 +13,7 @@ public:
 	void initialiser(string Nom, int Direction, int Force, 
 		int Vitesse, int Vision);
 
-	int bloquer() { return (vitesse / 3 + force) };
+	int bloquer() { return (vitesse / 3 + force); }
 
 	void mouvement(int& x, int& y) const;
 	void superCourse(int& x, int& y) const;
@@ -26,7 +26,7 @@ public:
 	int getVision() const { return vision; }
 
 	void setNom(string Nom) { nom = Nom; }
-	void setDirection(int Direction) { direction = Direction; }
+	void setDirection(int Direction);
 	void setForce(int Force) { force = Force; }
 	void setVitesse(int Vitesse) { vitesse = Vitesse; }
 	void setVision(int Vision) { vision = Vision; }
