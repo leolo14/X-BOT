@@ -1,6 +1,5 @@
 
-
-class X212
+class X213
 {
 private:
 	char nom;
@@ -9,12 +8,14 @@ private:
 	int vitesse;
 	int vision;
 
+
 public:
 	void initialiser(char Nom, int Direction, int Force, int Vitesse, int Vision);
-	int bloquer() { return (getVitesse() / 3 + getForce()) };
+	int bloquer() { return (vitesse / 3 + force) };
 	void mouvement(int& x, int& y);
 	void superCourse(int& x, int& y);
-	void esquive(int& x, int& y, int xDanger, int yDanger);
+	void tournerLesTalons() { direction = (direction + 2) % 3) };
+
 
 	char getNom() const { return nom; }
 	int getDirection() const { return direction; }
@@ -28,4 +29,3 @@ public:
 	void setVitesse(int Vitesse) { vitesse = Vitesse; }
 	void setVision(int Vision) { vision = Vision; }
 };
-

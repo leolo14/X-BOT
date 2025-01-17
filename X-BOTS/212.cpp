@@ -3,17 +3,26 @@
 
 void X212::initialiser(char Nom, int Direction, int Force, int Vitesse, int Vision)
 {
-	setNom(Nom);
-	setDirection(Direction);
-	setForce(Force);
-	setVitesse(Vitesse);
-	setVision(Vision);
+	nom = Nom;
+
+	if (Direction >= 0 || Direction < 4)
+	{
+		direction = Direction;
+	}
+	else
+	{
+		direction = 0;
+	}
+
+	force = Force;
+	vitesse = Vitesse;
+	vision = Vision;
 }
 
 void X212::mouvement(int& x, int& y)
 {
-	int deplacement = getVitesse + 1;
-	switch (Direction)
+	int deplacement = vitesse + 1;
+	switch (direction)
 	{
 	case 0: x -= deplacement; break;
 	case 1: y += deplacement; break;
@@ -27,8 +36,8 @@ void X212::mouvement(int& x, int& y)
 
 void X212::superCourse(int& x, int& y)
 {
-	int deplacement = getVitesse() + (getVitesse() * getForce()/10);
-	switch (Direction)
+	int deplacement = vitesse + (vitesse * force/10);
+	switch (direction)
 	{
 	case 0: x -= deplacement; break;
 	case 1: y += deplacement; break;
