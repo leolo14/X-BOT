@@ -1,22 +1,23 @@
-#include "#212.h"
+#include "212.h"
 
 
-void X212::initialiser(char Nom, int Direction, int Force, int Vitesse, int Vision)
+void X212::initialiser(char Nom, int Direction, int Force,
+	int Vitesse, int Vision)
 {
-	nom = Nom;
+	setNom(Nom);
 
 	if (Direction >= 0 || Direction < 4)
 	{
-		direction = Direction;
+		setDirection(Direction);
 	}
 	else
 	{
-		direction = 0;
+		setDirection(0);
 	}
 
-	force = Force;
-	vitesse = Vitesse;
-	vision = Vision;
+	setForce(Force);
+	setVitesse(Vitesse);
+	setVision(Vision);
 }
 
 void X212::mouvement(int& x, int& y)

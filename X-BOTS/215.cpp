@@ -1,22 +1,23 @@
-#include "#215.h"
+#include "215.h"
 
 
-void X215::initialiser(char Nom, int Direction, int Force, int Vitesse, int Vision)
+void X215::initialiser(char Nom, int Direction, int Force, 
+	int Vitesse, int Vision)
 {
-	nom = Nom;
+	setNom(Nom);
 
 	if (Direction >= 0 || Direction < 4)
 	{
-		direction = Direction;
+		setDirection(Direction);
 	}
 	else
 	{
-		direction = 0;
+		setDirection(0);
 	}
 
-	force = Force;
-	vitesse = Vitesse;
-	vision = Vision;
+	setForce(Force);
+	setVitesse(Vitesse);
+	setVision(Vision);
 	rageCombat = false;
 }
 

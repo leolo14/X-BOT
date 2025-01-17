@@ -1,7 +1,8 @@
-#include "#213.h"
+#include "213.h"
 
 
-void X213::initialiser(char Nom, int Direction, int Force, int Vitesse, int Vision)
+void X213::initialiser(char Nom, int Direction, int Force, 
+	int Vitesse, int Vision)
 {
 	nom = Nom;
 
