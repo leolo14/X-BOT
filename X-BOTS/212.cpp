@@ -1,5 +1,29 @@
 #include "212.h"
 
+X212::X212(string Nom, int Direction, int Force,
+	int Vitesse, int Vision)
+{
+	setNom(Nom);
+	setDirection(Direction);
+	setForce(Force);
+	setVitesse(Vitesse);
+	setVision(Vision);
+
+	Compteur::ajouterConstructeur();
+}
+
+X212::X212(const X212& x212)
+{
+	nom = x212.nom;
+	direction = x212.direction;	
+	force = x212.force;
+	vitesse = x212.vitesse;
+	vision = x212.vision;
+
+	Compteur::ajouterConstructeurCopie();
+	
+}
+
 
 void X212::initialiser(string Nom, int Direction, int Force,
 	int Vitesse, int Vision)

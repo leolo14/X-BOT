@@ -5,9 +5,11 @@
 #include "R234.h"
 #include "G990.h"
 #include "W000.h"
+#include "Compteur.h"
 
 using namespace std;
-
+//Tests Etape #1
+/*
 void testX212() 
 {
 	int x = 3;
@@ -366,9 +368,37 @@ void testsXBots()
 		}
 	} while (choix != 'q');
 }
+*/
+
+void testChargementXBots()
+{
+	X212 x212("x212", 0, 4, 3, 5);
+	X213 x213("x213", 0, 4, 3, 5);
+	X215 x215("x215", 0, 4, 3, 5);
+	R234 r234(0, 4, 3, 5);
+	G990 g990(true, false, 7, 7, 5);
+	W000 w000("W000", 0, 4, 3, 5);
+	X212 x212Copie(x212);
+	X213 x213Copie(x213);
+	X215 x215Copie(x215);
+	R234 r234Copie(r234);
+	G990 g990Copie(g990);
+	W000 w000Copie(w000);
+	cout << "X212 : " << x212.getNom() << "/" << x212Copie.getNom() << endl;
+	cout << "X213 : " << x213.getNom() << "/" << x213Copie.getNom() << endl;
+	cout << "X215 : " << x215.getNom() << "/" << x215Copie.getNom() << endl;
+	cout << "R234 : " << r234.getStrength() << "/" << r234Copie.getStrength()
+		<< endl;
+	cout << "G990: " << g990.getEnergiePhysique() << "/" <<
+		g990Copie.getEnergiePhysique() << endl;
+	cout << "W000 : " << w000.getNom() << "/" << w000Copie.getNom() << endl;
+}
+
 
 int main()
 {
-	testsXBots();			// Semaine #2
+	//testsXBots(); // Semaine #2
+	testChargementXBots(); // Semaine #3
+	cout << Compteur::getInformation() << endl;
 	cin.get();
 }

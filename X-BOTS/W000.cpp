@@ -1,5 +1,27 @@
 #include "W000.h"
 
+W000::W000(string Nom, int Direction, int Force, int Vitesse, int Vision)
+{
+	setNom(Nom);
+	setDirection(Direction);
+	setForce(Force);
+	setVitesse(Vitesse);
+	setVision(Vision);
+
+	Compteur::ajouterConstructeur();
+}
+
+W000::W000(const W000& w000)
+{
+	nom = w000.nom;
+	direction = w000.direction;
+	force = w000.force;
+	vitesse = w000.vitesse;
+	vision = w000.vision;
+
+	Compteur::ajouterConstructeurCopie();
+}
+
 void W000::initialiser(string Nom, int Direction, int Force, int Vitesse, int Vision)
 {
 	setNom(Nom);

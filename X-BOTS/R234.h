@@ -1,4 +1,5 @@
 #include <algorithm>
+#include "Compteur.h"
 using namespace std;
 
 class R234
@@ -10,6 +11,11 @@ class R234
 		int range;
 
 	public:
+
+		R234(int Direction, int Strength, int Speed, int Range);
+		R234(const R234& r234);
+		~R234() { Compteur::ajouterDestructeur(); } 
+		
 		void initialiser(int Direction, int Strength, int Speed, int Range);
 		
 		int doAttack(int defenceEnemy) const

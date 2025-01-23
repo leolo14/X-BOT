@@ -1,4 +1,5 @@
 #include <string>
+#include "Compteur.h"
 using namespace std;
 
 class X213
@@ -12,6 +13,13 @@ private:
 
 
 public:
+
+	X213(string Nom, int Direction, int Force,
+		int Vitesse, int Vision);
+	X213(const X213& x213);
+	~X213() { Compteur::ajouterDestructeur(); }
+
+
 	void initialiser(string Nom, int Direction, int Force, 
 		int Vitesse, int Vision);
 

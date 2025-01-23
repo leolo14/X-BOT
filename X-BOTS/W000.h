@@ -1,4 +1,5 @@
 #include <string>
+#include "Compteur.h"
 using namespace std;
 
 class W000 {
@@ -10,6 +11,12 @@ class W000 {
 		int vision;
 
 	public:
+
+		W000(string Nom, int Direction, int Force,
+			int Vitesse, int Vision);
+		W000(const W000& w000);
+		~W000() { Compteur::ajouterDestructeur(); } 
+
 		void initialiser(string Nom, int Direction, int Force,
 			int Vitesse, int Vision);
 

@@ -1,11 +1,31 @@
 #include "R234.h"
 
+R234::R234(int Direction, int Strength, int Speed, int Range)
+{
+	setDirection(Direction);
+	setStrength(Strength);
+	setSpeed(Speed);
+	setRange(Range);
+
+	Compteur::ajouterConstructeur();
+}
+
+R234::R234(const R234& r234)
+{
+	direction = r234.direction;
+	strength = r234.strength;
+	speed = r234.speed;
+	range = r234.range;
+
+	Compteur::ajouterConstructeurCopie();
+}
+
 void R234::initialiser(int Direction, int Strength, int Speed, int Range)
 {
 	setDirection(Direction);
-	strength = Strength;
-	speed = Speed;
-	range = Range;
+	setStrength(Strength);
+	setSpeed(Speed);
+	setRange(Range);
 }
 
 void R234::setDirection(int Direction)

@@ -1,5 +1,26 @@
 #include "215.h"
 
+X215::X215(string Nom, int Direction, int Force, int Vitesse, int Vision)
+{
+	setNom(Nom);
+	setDirection(Direction);
+	setForce(Force);
+	setVitesse(Vitesse);
+	setVision(Vision);
+
+	Compteur::ajouterConstructeur();
+}
+
+X215::X215(const X215& x215)
+{
+	nom = x215.nom;
+	direction = x215.direction;
+	force = x215.force;
+	vitesse = x215.vitesse;
+	vision = x215.vision;
+
+	Compteur::ajouterConstructeurCopie();
+}
 
 void X215::initialiser(string Nom, int Direction, int Force, 
 	int Vitesse, int Vision)

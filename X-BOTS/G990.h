@@ -1,4 +1,5 @@
 #include <algorithm>
+#include "Compteur.h"
 using namespace std;
 
 class G990
@@ -11,6 +12,12 @@ private:
 	long vision;
 
 public:
+
+	G990(bool Nord, bool Est, long EnergiePhisique,
+		long EnergieMaximale, long Vision);
+	G990(const G990& g990);
+	~G990() { Compteur::ajouterDestructeur(); }
+
 	void initialiser(bool Nord, bool Est, long EnergiePhisique,
 		long EnergieMaximale, long Vision);
 	

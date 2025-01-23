@@ -1,4 +1,5 @@
 #include <string>
+#include "Compteur.h"
 using namespace std;
 
 class X215
@@ -12,6 +13,12 @@ private:
 	bool rageCombat;
 
 public:
+
+	X215(string Nom, int Direction, int Force,
+		int Vitesse, int Vision);
+	X215(const X215& x215);
+	~X215() { Compteur::ajouterDestructeur(); }
+
 	void initialiser(string Nom, int Direction, int Force,
 		int Vitesse, int Vision);
 

@@ -1,4 +1,7 @@
 #include <string>
+#include "Compteur.h"
+
+
 using namespace std;
 class X212
 {
@@ -10,6 +13,13 @@ private:
 	int vision;
 
 public:
+
+	X212(string Nom, int Direction, int Force,
+		int Vitesse, int Vision);
+	X212(const X212& x212);
+	~X212() { Compteur::ajouterDestructeur(); }
+
+
 	void initialiser(string Nom, int Direction, int Force, 
 		int Vitesse, int Vision);
 

@@ -1,16 +1,33 @@
 #include "213.h"
 
+X213::X213(string Nom, int Direction, int Force, int Vitesse, int Vision)
+{
+	setNom(Nom);
+	setDirection(Direction);
+	setForce(Force);
+	setVision(Vision);
+
+	Compteur::ajouterConstructeur();
+}
+
+X213::X213(const X213& x213)
+{
+	nom = x213.nom;
+	direction = x213.direction;
+	force = x213.force;
+	vitesse = x213.vitesse;
+	vision = x213.vision;
+
+	Compteur::ajouterConstructeurCopie();
+}
 
 void X213::initialiser(string Nom, int Direction, int Force, 
 	int Vitesse, int Vision)
 {
-	nom = Nom;
-
+	setNom(Nom);
 	setDirection(Direction);
-
-	force = Force;
-	vitesse = Vitesse;
-	vision = Vision;
+	setForce(Force);
+	setVision(Vision);
 }
 
 void X213::setDirection(int Direction)
